@@ -134,11 +134,13 @@
     </div>
 
     <!-- div2 -->
-
+{{-- hsefhfhgehgfhegegehjgjehgkhjdhckhjdsgjsgdhjcgkwjenc --}}
     </div>
 
     <div id="kk" class="post hidden fixed h-screen w-full top-0 left-0 bg-black/40">
-
+        <div class="form h-screen flex justify-center items-center">
+            wenakak
+        </div>
     </div>
     <script>
         const btn=document.querySelector("#kk");
