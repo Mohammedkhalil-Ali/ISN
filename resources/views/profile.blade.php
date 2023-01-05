@@ -63,7 +63,8 @@
         <hr class="w-[80%] mx-[10%] mt-10">
 
         <!-- post -->
-        <div class="w-[80%] mx-[10%] mt-10 mb-10">
+        <div class="w-[80%] mx-[10%] mt-5 mb-10 text-center">
+            <p class="mb-5 cursor-pointer" id="addPost" onclick="show()"><i class="fa-solid fa-camera text-lg" ></i> Share New Photo</p>
             <div class="postakan grid grid-cols-3 gap-4">
 
                 <div class="relative group">
@@ -135,5 +136,16 @@
     <!-- div2 -->
 
     </div>
+
+    <div id="kk" class="post hidden fixed h-screen w-full top-0 left-0 bg-black/40">
+
+    </div>
+
+    <script>
+        const btn=document.querySelector("#kk");
+        const show=()=>{
+            btn.classList.toggle('hidden')
+        }
+    </script>
 </body>
 </html>
