@@ -177,7 +177,7 @@
             </div>
         </div>
     </div>
- {{-- jdfd --}}
+ {{-- jdf --}}
     <script>
         const btn=document.querySelector("#sharepost");
         let img=document.querySelector("#img");
