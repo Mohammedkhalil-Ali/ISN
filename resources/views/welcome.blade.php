@@ -1,45 +1,138 @@
+
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex justify-left min-h-screen">
 
-        <title>Laravel</title>
+        <!-- div1 -->
 
-        <!-- Fonts -->
-        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-gray-100{--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.border-gray-200{--tw-border-opacity: 1;border-color:rgb(229 231 235 / var(--tw-border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1);--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}.text-center{text-align:center}.text-gray-200{--tw-text-opacity: 1;color:rgb(229 231 235 / var(--tw-text-opacity))}.text-gray-300{--tw-text-opacity: 1;color:rgb(209 213 219 / var(--tw-text-opacity))}.text-gray-400{--tw-text-opacity: 1;color:rgb(156 163 175 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity))}.text-gray-600{--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-700{--tw-text-opacity: 1;color:rgb(55 65 81 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity: 1;color:rgb(17 24 39 / var(--tw-text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity))}.dark\:bg-gray-900{--tw-bg-opacity: 1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.dark\:border-gray-700{--tw-border-opacity: 1;border-color:rgb(55 65 81 / var(--tw-border-opacity))}.dark\:text-white{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:text-gray-400{--tw-text-opacity: 1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-gray-500{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity))}}
-        </style>
+        <div class="basis-2/12"></div>
+    <div class="fixed bg-white h-screen flex flex-col justify-between py-8 items-left w-2/12 border-r">
+        <div><h1 class="text-3xl ml-4" style="font-family: 'Satisfy', cursive;">Instagram</h1></div>
+        <div class="flex justify-around flex-col h-[450px] ml-2" >
+            <a href="./snl.html" class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1"><i class="fa-solid fa-house mr-4 text-2xl ml-1"></i> Home</a>
+            <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-solid fa-magnifying-glass mr-4 text-2xl ml-1"></i>Search</p>
+            <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-brands fa-wpexplorer mr-4 text-2xl ml-1"></i>Explore</p>
+            <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-regular fa-message mr-4 text-2xl ml-1"></i>Message</p>
+            <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-solid fa-bell mr-4 text-2xl ml-1"></i>Notification</p>
+            <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-regular fa-square-plus mr-4 text-2xl ml-1"></i></i>Create</p>
+            <a href="./profile.html" class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 flex items-center gap-x-2"><div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-10 h-10 object-fill"></div>Profile</a>
+        </div>
+        <div class="ml-2"><p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-solid fa-bars ml-1 mr-4 text-xl"></i>more</p></div>
+    </div>
 
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
+    <!-- div1 -->
+
+    <!-- div2 -->
+
+
+    <div class="basis-6/12 bg-gray-50 flex flex-col items-end">
+        <div class="bg-white overflow-x-auto flex gap-x-4 p-3 w-[450px] my-2 rounded-md mt-4 border">
+            <div class="stories flex flex-col text-center w-14">
+                <div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-12 h-12 object-fill"></div>
+                <p>Ad</p>
+            </div>
+
+            <div class="stories flex flex-col text-center w-14">
+                <div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-12 h-12 object-fill"></div>
+                <p>Ad</p>
+            </div>
+
+
+            <div class="stories flex flex-col text-center w-14">
+                <div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-12 h-12 object-fill"></div>
+                <p>Ad</p>
+            </div>
+
+            <div class="stories flex flex-col text-center w-14">
+                <div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-12 h-12 object-fill"></div>
+                <p>Ad</p>
+            </div>
+
+            <div class="stories flex flex-col text-center w-14">
+                <div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-12 h-12 object-fill"></div>
+                <p>Ad</p>
+            </div>
+
+            <div class="stories flex flex-col text-center w-14">
+                <div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-12 h-12 object-fill"></div>
+                <p>Ad</p>
+            </div>
+            
+        </div>
+        <div>
+            <div class="bg-white w-[450px] h-fit rounded-md mb-4 border">
+                <div class="headerpost flex justify-between items-center">
+                    <div class="data flex items-center my-2 ml-1">
+                        <div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-12 h-12 object-fill"></div>
+                        <p class="title text-md ml-2">Ahmad</p>
+                    </div>
+                    <p class="mr-4">...</p>
                 </div>
-            @endif
-                    <div class="ml-4 text-center text-sm text-gray-500 bg-white  sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                <div>
+                    <img src="{{ asset('khom.JPG') }}" alt="" class="h-fit w-full">
+                </div>
+                <div class="like flex gap-4 ml-4 mt-2">
+                    <i class="fa-regular fa-heart text-2xl"></i>
+                    <i class="fa-regular fa-comment text-2xl"></i>
+                </div>
+
+                <div class="headerpost flex items-center ml-4 mt-2">
+                    <div class="data">
+                        <p class="title text-sm font-bold">Ahmad</p>
+                    </div>
+                    <p class="text-sm font-light ml-4">Slaw la hawreyan</p>
+                </div>
+
+                    <div class="data ml-4 mt-2">
+                        <p class="title text-sm font-light opacity-60">View all 0 comment</p>
+                        <p class="title text-xs font-light uppercase opacity-60 mt-1">2 days ago</p>
+                    </div>
+
+                <div class="flex items-center mt-2 border-t">
+                    <div class="data ml-4 flex bg-transparent w-full">
+                        <input type="text" placeholder="Add a comment" class="w-[90%] py-2 border-none outline-none focus:outline-none focus:border-none">
+                        <p class="w-[10%] text-blue-400">Post</p>
                     </div>
                 </div>
+
             </div>
+
+
+            
+            
         </div>
-    </body>
+    </div>
+
+
+    <!-- div2 -->
+
+    <!-- div3 -->
+
+
+    <div class="basis-5/12 bg-gray-50">
+        <div class="flex items-center justify-between mx-4 mt-6 w-[60%]">
+            <div class="flex items-center">
+                <div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-14 h-14 object-fill"></div>
+            <div class="ml-2">
+                <p>Mohammed khalil</p>
+                <p class="opacity-60">Mohammed khalil</p>
+            </div>
+            </div>
+            <p class="text-blue-400">Switch</p>
+        </div>
+    </div>
+    </div>
+</body>
 </html>
