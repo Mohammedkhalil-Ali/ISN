@@ -134,12 +134,32 @@
     </div>
 
     <!-- div2 -->
-{{-- hsefhfhgehgfhegegeh --}}
+
+{{-- hsefhfgeh --}}
+
     </div>
 
-    <div id="kk" class="post hidden fixed h-screen w-full top-0 left-0 bg-black/40">
+    <div id="kk" class="post hidden fixed h-screen w-full top-0 left-0 bg-black/80">
+        <i class="fa-solid fa-plus fixed top-2 right-4 text-white text-4xl rotate-45 cursor-pointer" id="plus" onclick="show()"></i>
         <div class="form h-screen flex justify-center items-center">
-            wenakak
+            <div class="w-[60%] h-[75%] bg-white">
+                <div class="header flex justify-between items-center mx-2 mt-1">
+                    <i class="fa-solid fa-plus text-black text-2xl rotate-45 cursor-pointer" id="plus2" onclick="show()"></i>
+                    <p>Create New Post</p>
+                    <a class="text-blue-500 cursor-pointer">Share</a>
+                </div>
+                <hr>
+                <div class="mt-1">
+                    <form action="" method="" enctype="multipart/form-data">
+                        <div class="wenaka">
+
+                        </div>
+                        <div class="datakan">
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
     <script>
