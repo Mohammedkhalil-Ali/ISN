@@ -20,13 +20,13 @@
     <div class="fixed bg-white h-screen flex flex-col justify-between py-8 items-left w-2/12 border-r">
         <div><h1 class="text-3xl ml-4" style="font-family: 'Satisfy', cursive;">Instagram</h1></div>
         <div class="flex justify-around flex-col h-[450px] ml-2" >
-            <a href="./snl.html" class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1"><i class="fa-solid fa-house mr-4 text-2xl ml-1"></i> Home</a>
+            <a href="{{ route('home') }}" class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1"><i class="fa-solid fa-house mr-4 text-2xl ml-1"></i> Home</a>
             <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-solid fa-magnifying-glass mr-4 text-2xl ml-1"></i>Search</p>
             <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-brands fa-wpexplorer mr-4 text-2xl ml-1"></i>Explore</p>
             <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-regular fa-message mr-4 text-2xl ml-1"></i>Message</p>
             <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-solid fa-bell mr-4 text-2xl ml-1"></i>Notification</p>
             <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-regular fa-square-plus mr-4 text-2xl ml-1"></i></i>Create</p>
-            <a href="./profile.html" class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 flex items-center gap-x-2"><div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-10 h-10 object-fill"></div>Profile</a>
+            <a href="{{ route('profile') }}" class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 flex items-center gap-x-2"><div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-10 h-10 object-fill"></div>Profile</a>
         </div>
         <div class="ml-2"><p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-solid fa-bars ml-1 mr-4 text-xl"></i>more</p></div>
     </div>
@@ -122,7 +122,12 @@
 
 
     <div class="basis-5/12 bg-gray-50">
-        <div class="flex items-center justify-between mx-4 mt-6 w-[60%]">
+
+            
+
+            
+
+        <div class="flex items-center justify-between mx-4 mt-6 w-[80%]">
             <div class="flex items-center">
                 <div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-14 h-14 object-fill"></div>
             <div class="ml-2">
@@ -131,6 +136,10 @@
             </div>
             </div>
             <p class="text-blue-400">Switch</p>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+                <button type="submit" class="">Logout</button>
+            </form>
         </div>
     </div>
     </div>
