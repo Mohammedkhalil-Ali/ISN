@@ -177,7 +177,7 @@
             </div>
         </div>
     </div>
- {{-- 121314 --}}
+ {{-- 1314 --}}
     <script>
         const btn=document.querySelector("#sharepost");
         let img=document.querySelector("#img");
