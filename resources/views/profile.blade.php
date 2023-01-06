@@ -140,7 +140,6 @@
     <div id="kk" class="post hidden fixed h-screen w-full top-0 left-0 bg-black/40">
 
     </div>
-
     <script>
         const btn=document.querySelector("#kk");
         const show=()=>{
