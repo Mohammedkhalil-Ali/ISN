@@ -146,11 +146,12 @@
                 <div class="header flex justify-between items-center mx-2 mt-1">
                     <i class="fa-solid fa-plus text-black text-2xl rotate-45 cursor-pointer" id="plus2" onclick="show()"></i>
                     <p>Create New Post</p>
-                    <a class="text-blue-500 cursor-pointer">Share</a>
+                    {{-- <a class="text-blue-500 cursor-pointer" onclick="form()">Share</a> --}}
                 </div>
                 <hr>
                 <div class="">
-                    <form action="" method="" enctype="multipart/form-data">
+                    <form id="formstore" action="{{ route('postn.store') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <div class="flex justify-between">
                             <div class="wenaka w-[60%]">
                                 <label for="file">
@@ -159,17 +160,15 @@
                                 <div class="flex justify-center" id="label">
                                     <label for="file" class="bg-blue-400 cursor-pointer hover:bg-blue-600 rounded-md text-white px-3 py-1 mt-2">Select from computer</label>
                                 </div>
-                                <input type="file" name="file" id="file" class="hidden" onchange="changeimage(event)">
+                                <input type="file" name="file[]" id="file" class="hidden" onchange="changeimage(event)" multiple>
                             </div>
                             <div class="datakan h-[69vh]  border-l border-gray-400 w-[40%]">
                                 <div class="flex items-center mx-4 mt-3">
                                 <div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-8 h-8 object-fill"></div>
                                 <p>Mohammed Khalil</p>
                                 </div>
-                                <textarea name="" id="" cols="30" rows="7" class="w-full resize-none border-none focus:outline-none pl-4 pt-2 pr-2" placeholder="Write a Caption"></textarea>
-                                <hr>
-                                <input type="text" placeholder="Location" class="w-full border-none focus:outline-none pl-4 py-2 pr-2">
-                                <hr>
+                                <textarea name="caption" id="" cols="30" rows="15" class="w-full resize-none border-none focus:outline-none pl-4 pt-2 pr-2" placeholder="Write a Caption"></textarea>
+                                <button type="submit">Submit</button>
                             </div>
                         </div>
                     </form>
@@ -180,6 +179,7 @@
 
     
     <script>
+        const formstore=document.querySelector("#formstore");
         const btn=document.querySelector("#sharepost");
         let img=document.querySelector("#img");
         let label=document.querySelector("#label");
@@ -192,6 +192,9 @@
             img.src=URL.createObjectURL(event.target.files[0])
             label.classList.add('hidden')
         }
+        // const form=()=>{
+        //     formstore.submit();
+        // }
     </script>
 </body>
 </html>

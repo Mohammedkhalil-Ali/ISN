@@ -30,26 +30,13 @@ class User extends Authenticatable
         'password',
     ];
 
-    // public function post(){
-    //     return $this->hasMany(Post::class,$this->id);
-    // }
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
     protected $hidden = [
-        'password',
-        'remember_token',
+        'password'
     ];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    public function posts(){
+        return $this->hasMany(Post::class,'user_id');
+    }
+   
 }

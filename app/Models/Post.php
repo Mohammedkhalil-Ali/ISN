@@ -8,7 +8,7 @@ use App\Models\User;
 
 class Post extends Model
 {
-    protected $fillable=['user_id','caption,img'];
+    protected $fillable=['user_id','caption','img'];
 
     public function user(){
         return $this->belongsTo(User::class,'user_id');

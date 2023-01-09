@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\Post\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,16 +19,20 @@ Auth::routes();
 Route::middleware(['auth'])->group(function(){
 
     Route::get('/', function () {
-        return view('welcome');
+        return view('index');
     });
     
     Route::get('/home',function(){
-        return view('welcome');
+        return view('index');
     })->name('home');
 
-    Route::get('/profile',function(){
-        return view('profile');
-    })->name('profile');
+    Route::get('/profile',function(){ return view('profile');})->name('profile');
+
+
+
+
+    // Route::post('/postds', [PostController::class,'store'])->name('post.store');
+    Route::resource('postn', PostController::class);
 
 });
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
