@@ -50,7 +50,7 @@ class PostController extends Controller
         auth()->user()->posts()->create($request->only('caption','img'));
         return redirect()->route('profile');
     }
-
+// 
     /**
      * Display the specified resource.
      *
