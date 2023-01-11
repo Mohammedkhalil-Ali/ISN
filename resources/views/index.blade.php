@@ -26,7 +26,7 @@
             <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-regular fa-message mr-4 text-2xl ml-1"></i>Message</p>
             <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-solid fa-bell mr-4 text-2xl ml-1"></i>Notification</p>
             <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-regular fa-square-plus mr-4 text-2xl ml-1"></i></i>Create</p>
-            <a href="{{ route('profile') }}" class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 flex items-center gap-x-2"><div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-10 h-10 object-fill"></div>Profile</a>
+            <a href="{{ route('postshare.index') }}" class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 flex items-center gap-x-2"><div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-10 h-10 object-fill"></div>Profile</a>
         </div>
         <div class="ml-2"><p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-solid fa-bars ml-1 mr-4 text-xl"></i>more</p></div>
     </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Post;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PostValidate;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -15,6 +16,13 @@ class PostController extends Controller
      */
     public function index()
     {
+
+        $all = Post::with('user')->get();
+        // if(request()->wantsJson()){
+        //     return $all;
+        // }
+        return $all;
+
         return view('index');
     }
 

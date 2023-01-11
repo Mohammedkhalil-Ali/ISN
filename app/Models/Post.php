@@ -10,6 +10,12 @@ class Post extends Model
 {
     protected $fillable=['user_id','caption','img'];
 
+    protected $appends=["image"];
+
+    public function getImageAttribute(){
+        return json_decode($this->img);
+    }
+
     public function user(){
         return $this->belongsTo(User::class,'user_id');
     }

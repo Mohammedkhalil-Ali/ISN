@@ -32,7 +32,7 @@ Route::middleware(['auth'])->group(function(){
 
 
     // Route::post('/postds', [PostController::class,'store'])->name('post.store');
-    Route::resource('postn', PostController::class);
+    Route::resource('postshare', PostController::class);
 
 });
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

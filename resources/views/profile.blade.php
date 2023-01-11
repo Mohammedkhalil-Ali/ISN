@@ -150,7 +150,7 @@
                 </div>
                 <hr>
                 <div class="">
-                    <form id="formstore" action="{{ route('postn.store') }}" method="POST" enctype="multipart/form-data">
+                    <form id="formstore" action="{{ route('postshare.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="flex justify-between">
                             <div class="wenaka w-[60%]">
