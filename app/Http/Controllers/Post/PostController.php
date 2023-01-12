@@ -18,6 +18,15 @@ class PostController extends Controller
      */
     public function index(Request $request)
     {
+
+        // {"id":1,"caption":"mk","img":"[\"RXALy9VKGMzcrPrxSTjr1HaFBqu7csChQ3kAIze8.jpg\"]",
+        //     "user_id":1,"created_at":"2023-01-09T16:40:38.000000Z","updated_at":"2023-01-09T16:40:38.000000Z",
+        //     "image":["RXALy9VKGMzcrPrxSTjr1HaFBqu7csChQ3kAIze8.jpg"],
+        //     "user":{"id":1,"firstname":"Mohammed","lastname":"Khalil","username":"mkdev","phone":"07501078679",
+        //         "img":"default-profile.png","location":"Darbandikhan","bio":null,"state":0,"email":"muhamad.khalil12345@gmail.com",
+        //         "email_verified_at":null,"remember_token":null,
+        //         "created_at":"2023-01-06T00:27:56.000000Z","updated_at":"2023-01-06T00:27:56.000000Z"}}
+
         $receiver=[];
         $follows = Follows::where('sender_id',auth()->user()->id)->where('state',1)->pluck('receiver_id');
         foreach ($follows as $value) {
@@ -25,12 +34,12 @@ class PostController extends Controller
         }
         $receiver[]=auth()->user()->id;
 
-        $posts = Post::with(['user'])->whereIn('user_id',$receiver)->get();
+        $postakan = Post::with(['user'])->whereIn('user_id',$receiver)->get();
         // if(request()->wantsJson()){
         //     return $all;
         // }
 
-         return view('profile',compact('posts'));
+         return view('index',compact('postakan'));
     }
 
     /**

@@ -19,11 +19,11 @@ Auth::routes();
 Route::middleware(['auth'])->group(function(){
 
     Route::get('/', function () {
-        return view('index');
+        return redirect()->route('postshare.index');
     });
     
     Route::get('/home',function(){
-        return view('index');
+        return redirect()->route('postshare.index');
     })->name('home');
 
     Route::get('/profile',function(){ return view('profile');})->name('profile');

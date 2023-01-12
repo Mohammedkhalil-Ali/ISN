@@ -10,10 +10,17 @@ class Post extends Model
 {
     protected $fillable=['user_id','caption','img'];
 
-    protected $appends=["image"];
+    protected $appends=["image","comment_count"];
 
     public function getImageAttribute(){
         return json_decode($this->img);
+    }
+    public function comments(){
+        return $this->hasMany(Comment::class,'post_id');
+    }
+
+    public function getCommentCountAttribute(){
+        return count($this->comments);
     }
 
     public function user(){

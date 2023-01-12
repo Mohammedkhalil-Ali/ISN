@@ -19,13 +19,13 @@
     <div class="fixed bg-white h-screen flex flex-col justify-between py-8 items-left w-2/12 border-r">
         <div><h1 class="text-3xl ml-4" style="font-family: 'Satisfy', cursive;">Instagram</h1></div>
         <div class="flex justify-around flex-col h-[450px] ml-2" >
-            <a href="{{ route('home') }}" class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1"><i class="fa-solid fa-house mr-4 text-2xl ml-1"></i> Home</a>
+            <a href="{{ route('postshare.index') }}" class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1"><i class="fa-solid fa-house mr-4 text-2xl ml-1"></i> Home</a>
             <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1"><i class="fa-solid fa-magnifying-glass mr-4 text-2xl ml-1"></i>Search</p>
             <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1"><i class="fa-brands fa-wpexplorer mr-4 text-2xl ml-1"></i>Explore</p>
             <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1"><i class="fa-regular fa-message mr-4 text-2xl ml-1"></i>Message</p>
             <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1"><i class="fa-solid fa-bell mr-4 text-2xl ml-1"></i>Notification</p>
             <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1"><i class="fa-regular fa-square-plus mr-4 text-2xl ml-1"></i></i>Create</p>
-            <a href="{{ route('postshare.index') }}" class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 flex items-center gap-x-2 "><div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-12 h-12 object-fill "></div>Profile</a>
+            <a href="{{ route('profile') }}" class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 flex items-center gap-x-2 "><div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-12 h-12 object-fill "></div>Profile</a>
         </div>
         <div class="ml-2"><p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1"><i class="fa-solid fa-bars mr-4 text-xl ml-1"></i>more</p></div>
     </div>
@@ -34,11 +34,14 @@
     <!-- div1 -->
 
     <!-- div2 -->
-
+    
+    
     <div class="profile basis-10/12 bg-gray-50">
+       
         <div class="header flex w-100% justify-start ml-40 mt-10 gap-x-20">
             <div class="wenaka">
-                <div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-36 h-36 object-fill "></div>
+                <div style="background-image: url('{{ asset('khom.JPG') }}')"
+                 class="bg-center bg-cover rounded-full bg-no-repeat w-36 h-36 object-fill "></div>
             </div>
             <div class="bio">
                 <div class="naw flex justify-between items-center gap-x-10">
@@ -66,7 +69,7 @@
         <div class="w-[80%] mx-[10%] mt-5 mb-10 text-center">
             <p class="mb-5 cursor-pointer" id="addPost" onclick="show()"><i class="fa-solid fa-camera text-lg" ></i> Share New Photo</p>
             <div class="postakan grid grid-cols-3 gap-4">
-
+                
                 <div class="relative group">
                     <img src="{{ asset('khom.JPG') }}" class="h-80 w-full shadow-sm" alt="" srcset="">
                     <div class="hovern hidden group-hover:block hover:bg-black/10 h-full w-full absolute top-0">
@@ -131,6 +134,8 @@
                  
             </div>
         </div>
+
+       
     </div>
 
     <!-- div2 -->

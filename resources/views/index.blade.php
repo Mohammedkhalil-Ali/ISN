@@ -20,13 +20,13 @@
     <div class="fixed bg-white h-screen flex flex-col justify-between py-8 items-left w-2/12 border-r">
         <div><h1 class="text-3xl ml-4" style="font-family: 'Satisfy', cursive;">Instagram</h1></div>
         <div class="flex justify-around flex-col h-[450px] ml-2" >
-            <a href="{{ route('home') }}" class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1"><i class="fa-solid fa-house mr-4 text-2xl ml-1"></i> Home</a>
+            <a href="{{ route('postshare.index') }}" class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1"><i class="fa-solid fa-house mr-4 text-2xl ml-1"></i> Home</a>
             <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-solid fa-magnifying-glass mr-4 text-2xl ml-1"></i>Search</p>
             <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-brands fa-wpexplorer mr-4 text-2xl ml-1"></i>Explore</p>
             <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-regular fa-message mr-4 text-2xl ml-1"></i>Message</p>
             <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-solid fa-bell mr-4 text-2xl ml-1"></i>Notification</p>
             <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-regular fa-square-plus mr-4 text-2xl ml-1"></i></i>Create</p>
-            <a href="{{ route('postshare.index') }}" class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 flex items-center gap-x-2"><div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-10 h-10 object-fill"></div>Profile</a>
+            <a href="{{ route('profile') }}" class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 flex items-center gap-x-2"><div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-10 h-10 object-fill"></div>Profile</a>
         </div>
         <div class="ml-2"><p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 cursor-pointer"><i class="fa-solid fa-bars ml-1 mr-4 text-xl"></i>more</p></div>
     </div>
@@ -71,17 +71,21 @@
             </div>
             
         </div>
+
         <div>
+
+            @foreach ($postakan as $post)
             <div class="bg-white w-[450px] h-fit rounded-md mb-4 border">
                 <div class="headerpost flex justify-between items-center">
                     <div class="data flex items-center my-2 ml-1">
-                        <div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-12 h-12 object-fill"></div>
-                        <p class="title text-md ml-2">Ahmad</p>
+                        <div style="background-image: url('{{ asset('Profile/'.$post->user->img) }}')" 
+                        class="bg-center bg-cover rounded-full bg-no-repeat w-12 h-12 object-fill"></div>
+                        <p class="title text-md ml-2">{{ $post->user->firstname  }}  {{ $post->user->lastname }}</p>
                     </div>
                     <p class="mr-4">...</p>
                 </div>
                 <div>
-                    <img src="{{ asset('khom.JPG') }}" alt="" class="h-fit w-full">
+                    <img src="{{ asset('Post/'.$post->image[0]) }}" alt="" class="h-fit w-full">
                 </div>
                 <div class="like flex gap-4 ml-4 mt-2">
                     <i class="fa-regular fa-heart text-2xl"></i>
@@ -90,14 +94,14 @@
 
                 <div class="headerpost flex items-center ml-4 mt-2">
                     <div class="data">
-                        <p class="title text-sm font-bold">Ahmad</p>
+                        <p class="title text-sm font-bold">{{ $post->user->firstname  }}  {{ $post->user->lastname }}</p>
                     </div>
-                    <p class="text-sm font-light ml-4">Slaw la hawreyan</p>
+                    <p class="text-sm font-light ml-4">{{ $post->caption }}</p>
                 </div>
 
                     <div class="data ml-4 mt-2">
-                        <p class="title text-sm font-light opacity-60">View all 0 comment</p>
-                        <p class="title text-xs font-light uppercase opacity-60 mt-1">2 days ago</p>
+                        <p class="title text-sm font-light opacity-60">View all {{ $post->comment_count }} comment</p>
+                        <p class="title text-xs font-light uppercase opacity-60 mt-1">{{ $post->created_at->diffForHumans() }}</p>
                     </div>
 
                 <div class="flex items-center mt-2 border-t">
@@ -107,12 +111,15 @@
                     </div>
                 </div>
 
-            </div>
+            </div>    
+
+            @endforeach
+
+   
 
 
-            
-            
         </div>
+        
     </div>
 
 
