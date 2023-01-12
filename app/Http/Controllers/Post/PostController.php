@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Post;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PostValidate;
+use App\Models\Follows;
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -14,16 +16,21 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $receiver=[];
+        $follows = Follows::where('sender_id',auth()->user()->id)->where('state',1)->pluck('receiver_id');
+        foreach ($follows as $value) {
+            $receiver[]=$value;
+        }
+        $receiver[]=auth()->user()->id;
 
-        $all = Post::with('user')->get();
+        $posts = Post::with(['user'])->whereIn('user_id',$receiver)->get();
         // if(request()->wantsJson()){
         //     return $all;
         // }
-        return $all;
 
-        return view('index');
+         return view('profile',compact('posts'));
     }
 
     /**
