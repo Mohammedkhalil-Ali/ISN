@@ -91,7 +91,7 @@
                     <i class="fa-regular fa-heart text-2xl"></i>
                     <i class="fa-regular fa-comment text-2xl"></i>
                 </div>
-{{--  --}}
+
                 <div class="headerpost flex items-center ml-4 mt-2">
                     <div class="data">
                         <p class="title text-sm font-bold">{{ $post->user->firstname  }}  {{ $post->user->lastname }}</p>
