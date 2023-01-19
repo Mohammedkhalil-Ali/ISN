@@ -45,14 +45,14 @@
             </div>
             <div class="bio">
                 <div class="naw flex justify-between items-center gap-x-10">
-                    <p class="text-2xl">Mohammed Khalil</p>
+                    <p class="text-2xl">{{ $users[0]->firstname }} {{ $users[0]->lastname }}</p>
                     <a href="" class="p-2 bg-gray-100 rounded-md font-medium">Edit Profile</a>
                     <i class="fa-solid fa-gear"></i>
                 </div>
                 <div class="follow flex justify-start gap-x-8 items-center mt-4">
-                    <p>0 Posts</p>
-                    <p>0 Followers</p>
-                    <p>0 Following</p>
+                    <p>{{ $users[0]->post_count }} Posts</p>
+                    <p>{{ $users[0]->follows_count }} Followers</p>
+                    <p>{{ $users[0]->following_count }} Following</p>
                 </div>
                 <div class="rasm mt-6">
                     <p>Mohammed Khalil</p>

@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class ProfileController extends Controller
 {
     public function index(){
-        $user=User::with(['posts'])->get();
-        return view('profile');
+        $users=User::where('id',auth()->user()->id)->with(['posts'])->get();
+        return view('profile',compact('users'));
     }
 }

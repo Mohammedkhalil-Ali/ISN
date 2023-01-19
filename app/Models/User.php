@@ -30,6 +30,7 @@ class User extends Authenticatable
         'password',
     ];
 
+    protected $appends=['post_count','follows_count','following_count'];
 
     protected $hidden = [
         'password'
@@ -37,6 +38,26 @@ class User extends Authenticatable
 
     public function posts(){
         return $this->hasMany(Post::class,'user_id');
+    }
+
+    public function getPostCountAttribute(){
+        return count($this->posts);
+    }
+
+    public function follow(){
+        return $this->hasMany(Follows::class,'sender_id')->where('state',1);
+    }
+
+    public function following(){
+        return $this->hasMany(Follows::class,'receiver_id')->where('state',1);
+    }
+
+    public function getFollowsCountAttribute(){
+        return count($this->follow);
+    }
+
+    public function getFollowingCountAttribute(){
+        return count($this->following);
     }
 
     public function follows(){
