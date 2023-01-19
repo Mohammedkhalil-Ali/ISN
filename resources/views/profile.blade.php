@@ -25,7 +25,7 @@
             <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1"><i class="fa-regular fa-message mr-4 text-2xl ml-1"></i>Message</p>
             <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1"><i class="fa-solid fa-bell mr-4 text-2xl ml-1"></i>Notification</p>
             <p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1"><i class="fa-regular fa-square-plus mr-4 text-2xl ml-1"></i></i>Create</p>
-            <a href="{{ route('profile') }}" class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 flex items-center gap-x-2 "><div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-12 h-12 object-fill "></div>Profile</a>
+            <a href="{{ route('profile') }}" class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1 flex items-center gap-x-2 "><div style="background-image: url('{{ asset('Profile/'.$users[0]->img) }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-10 h-10 object-fill "></div>Profile</a>
         </div>
         <div class="ml-2"><p class="hover:bg-gray-200 mx-2 rounded-full py-2 px-1"><i class="fa-solid fa-bars mr-4 text-xl ml-1"></i>more</p></div>
     </div>
@@ -40,7 +40,7 @@
        
         <div class="header flex w-100% justify-start ml-40 mt-10 gap-x-20">
             <div class="wenaka">
-                <div style="background-image: url('{{ asset('khom.JPG') }}')"
+                <div style="background-image: url('{{ asset('Profile/'.$users[0]->img) }}')"
                  class="bg-center bg-cover rounded-full bg-no-repeat w-36 h-36 object-fill "></div>
             </div>
             <div class="bio">
@@ -121,7 +121,7 @@
                             </div>
                             <div class="datakan h-[69vh]  border-l border-gray-400 w-[40%]">
                                 <div class="flex items-center mx-4 mt-3">
-                                <div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-8 h-8 object-fill"></div>
+                                <div style="background-image: url('{{ asset('Profile/'.$users[0]->img) }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-8 h-8 object-fill"></div>
                                 <p>Mohammed Khalil</p>
                                 </div>
                                 <textarea name="caption" id="" cols="30" rows="15" class="w-full resize-none border-none focus:outline-none pl-4 pt-2 pr-2" placeholder="Write a Caption"></textarea>

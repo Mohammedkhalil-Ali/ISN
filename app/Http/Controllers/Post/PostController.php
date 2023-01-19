@@ -33,13 +33,13 @@ class PostController extends Controller
             $receiver[]=$value;
         }
         $receiver[]=auth()->user()->id;
-
+        $user=User::where('id',auth()->user()->id)->first();
         $postakan = Post::with(['user'])->whereIn('user_id',$receiver)->latest()->get();
         // if(request()->wantsJson()){
         //     return $all;
         // }
 
-         return view('index',compact('postakan'));
+         return view('index',compact(['postakan','user']));
     }
 
     /**
