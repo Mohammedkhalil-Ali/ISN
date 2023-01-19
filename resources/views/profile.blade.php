@@ -103,7 +103,7 @@
                 <div class="header flex justify-between items-center mx-2 mt-1">
                     <i class="fa-solid fa-plus text-black text-2xl rotate-45 cursor-pointer" id="plus2" onclick="show()"></i>
                     <p>Create New Post</p>
-                    {{-- <a class="text-blue-500 cursor-pointer" onclick="form()">Share</a> --}}
+                    <a class="text-blue-500 cursor-pointer" onclick="form()">Share</a>
                 </div>
                 <hr>
                 <div class="">
@@ -125,7 +125,6 @@
                                 <p>Mohammed Khalil</p>
                                 </div>
                                 <textarea name="caption" id="" cols="30" rows="15" class="w-full resize-none border-none focus:outline-none pl-4 pt-2 pr-2" placeholder="Write a Caption"></textarea>
-                                <button type="submit">Submit</button>
                             </div>
                         </div>
                     </form>
@@ -149,9 +148,9 @@
             img.src=URL.createObjectURL(event.target.files[0])
             label.classList.add('hidden')
         }
-        // const form=()=>{
-        //     formstore.submit();
-        // }
+        const form=()=>{
+            formstore.submit();
+        }
     </script>
 </body>
 </html>
