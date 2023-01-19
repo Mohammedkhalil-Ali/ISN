@@ -34,7 +34,7 @@ class PostController extends Controller
         }
         $receiver[]=auth()->user()->id;
 
-        $postakan = Post::with(['user'])->whereIn('user_id',$receiver)->get();
+        $postakan = Post::with(['user'])->whereIn('user_id',$receiver)->latest()->get();
         // if(request()->wantsJson()){
         //     return $all;
         // }

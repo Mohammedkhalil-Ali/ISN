@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Post\PostController;
+use App\Http\Controllers\Post\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,7 +27,7 @@ Route::middleware(['auth'])->group(function(){
         return redirect()->route('postshare.index');
     })->name('home');
 
-    Route::get('/profile',function(){ return view('profile');})->name('profile');
+    Route::get('/profilen',[ProfileController::class,'index'])->name('profile');
 
 
 
