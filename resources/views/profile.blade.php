@@ -55,8 +55,8 @@
                     <p>{{ $users[0]->following_count }} Following</p>
                 </div>
                 <div class="rasm mt-6">
-                    <p>Mohammed Khalil</p>
-                    <p>Web Developers</p>
+                    <p>{{ $users[0]->username }}</p>
+                    <p>{{ $users[0]->bio }}</p>
                 </div>
             </div>
         </div>
@@ -69,68 +69,20 @@
         <div class="w-[80%] mx-[10%] mt-5 mb-10 text-center">
             <p class="mb-5 cursor-pointer" id="addPost" onclick="show()"><i class="fa-solid fa-camera text-lg" ></i> Share New Photo</p>
             <div class="postakan grid grid-cols-3 gap-4">
+                @foreach ($users[0]->posts as $post )
                 
                 <div class="relative group">
-                    <img src="{{ asset('khom.JPG') }}" class="h-80 w-full shadow-sm" alt="" srcset="">
+                    <img src="{{ asset('post/'.$post->image[0]) }}" class="h-80 w-full shadow-sm" alt="" srcset="">
                     <div class="hovern hidden group-hover:block hover:bg-black/10 h-full w-full absolute top-0">
                         <div class="flex gap-x-4 items-center justify-center h-80 text-white font-medium">
-                            <div class="flex items-center gap-x-1"><i class="fa-solid fa-heart text-2xl"></i> 0 </div>
-                            <div class="flex items-center gap-x-1"><i class="fa-solid fa-comment text-2xl"></i> 0</div>
+                            <div class="flex items-center gap-x-1"><i class="fa-solid fa-heart text-2xl"></i> {{ $post->like_count }} </div>
+                            <div class="flex items-center gap-x-1"><i class="fa-solid fa-comment text-2xl"></i> {{ $post->comment_count }}</div>
                         </div>
                     </div>
                 </div>
 
-
-                <div class="relative group">
-                    <img src="{{ asset('khom.JPG') }}" 
-                    class="h-80 shadow-sm w-full" alt="" srcset="">
-                    <div class="hovern hidden group-hover:block hover:bg-black/10 h-full w-full absolute top-0">
-                        <div class="flex gap-x-4 items-center justify-center h-80 text-white font-medium">
-                            <div class="flex items-center gap-x-1"><i class="fa-solid fa-heart text-2xl"></i> 0 </div>
-                            <div class="flex items-center gap-x-1"><i class="fa-solid fa-comment text-2xl"></i> 0</div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="relative group">
-                    <img src="{{ asset('khom.JPG') }}" 
-                    class="h-80 shadow-sm w-full" alt="" srcset="">
-                    <div class="hovern hidden group-hover:block hover:bg-black/10 h-full w-full absolute top-0">
-                        <div class="flex gap-x-4 items-center justify-center h-80 text-white font-medium">
-                            <div class="flex items-center gap-x-1"><i class="fa-solid fa-heart text-2xl"></i> 0 </div>
-                            <div class="flex items-center gap-x-1"><i class="fa-solid fa-comment text-2xl"></i> 0</div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="relative group">
-                    <img src="{{ asset('khom.JPG') }}" 
-                    class="h-80 shadow-sm w-full" alt="" srcset="">
-                    <div class="hovern hidden group-hover:block hover:bg-black/10 h-full w-full absolute top-0">
-                        <div class="flex gap-x-4 items-center justify-center h-80 text-white font-medium">
-                            <div class="flex items-center gap-x-1"><i class="fa-solid fa-heart text-2xl"></i> 0 </div>
-                            <div class="flex items-center gap-x-1"><i class="fa-solid fa-comment text-2xl"></i> 0</div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="relative group">
-                    <img src="{{ asset('khom.JPG') }}" 
-                    class="h-80 shadow-sm w-full" alt="" srcset="">
-                    <div class="hovern hidden group-hover:block hover:bg-black/10 h-full w-full absolute top-0">
-                        <div class="flex gap-x-4 items-center justify-center h-80 text-white font-medium">
-                            <div class="flex items-center gap-x-1"><i class="fa-solid fa-heart text-2xl"></i> 0 </div>
-                            <div class="flex items-center gap-x-1"><i class="fa-solid fa-comment text-2xl"></i> 0</div>
-                        </div>
-                    </div>
-                </div>
-
-                
-
-                
+                @endforeach
+    
                  
             </div>
         </div>
