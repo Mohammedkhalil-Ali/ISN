@@ -106,9 +106,9 @@
                     </div>
 
                 <div class="flex items-center mt-2 border-t">
-                    <div class="data ml-4 flex bg-transparent w-full">
+                    <div class="data ml-4 flex items-center bg-transparent w-full">
                         <input type="text" placeholder="Add a comment" class="w-[90%] py-2 border-none outline-none focus:outline-none focus:border-none">
-                        <p class="w-[10%] text-blue-400">Post</p>
+                        <p class="w-[10%] text-blue-400 cursor-pointer">Post</p>
                     </div>
                 </div>
 
