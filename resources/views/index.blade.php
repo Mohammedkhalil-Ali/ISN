@@ -9,6 +9,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <style>
+
+        .swiper {
+          width: 420px;
+          height: 80px;
+        }
+  
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+  
+          /* Center slide text vertically */
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+        }
+  
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      
+
+      </style>
 </head>
 <body>
     <div class="flex justify-left min-h-screen">
@@ -38,37 +77,44 @@
 
 
     <div class="basis-6/12 bg-gray-50 flex flex-col items-end">
-        <div class="bg-white overflow-x-auto flex gap-x-4 p-3 w-[450px] my-2 rounded-md mt-4 border">
-            <div class="stories flex flex-col text-center w-14">
-                <div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-12 h-12 object-fill"></div>
-                <p>Ad</p>
-            </div>
+        <div class="bg-white w-[450px] p-1 my-1 rounded-md mt-4 border">
             
-
-            <div class="stories flex flex-col text-center w-14">
-                <div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-12 h-12 object-fill"></div>
-                <p>Ad</p>
-            </div>
-
-
-            <div class="stories flex flex-col text-center w-14">
-                <div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-12 h-12 object-fill"></div>
-                <p>Ad</p>
-            </div>
-
-            <div class="stories flex flex-col text-center w-14">
-                <div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-12 h-12 object-fill"></div>
-                <p>Ad</p>
-            </div>
-
-            <div class="stories flex flex-col text-center w-14">
-                <div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-12 h-12 object-fill"></div>
-                <p>Ad</p>
-            </div>
-
-            <div class="stories flex flex-col text-center w-14">
-                <div style="background-image: url('{{ asset('khom.JPG') }}')" class="bg-center bg-cover rounded-full bg-no-repeat w-12 h-12 object-fill"></div>
-                <p>Ad</p>
+            <div class="swiper mySwiper relative">
+                <div class="swiper-wrapper ">
+                  <div class="swiper-slide flex flex-col">
+                    <div class=" bg-center bg-cover rounded-full bg-no-repeat w-14 h-14 object-fill"  style="background-image: url('{{ asset('Profile/'.$user->img) }}')"></div>
+                    <p class="text-sm truncate w-16">Ahmad Khalil</p>
+                  </div>
+                  
+                  <div class="swiper-slide flex flex-col">
+                    <div class=" bg-center bg-cover rounded-full bg-no-repeat w-14 h-14 object-fill"  style="background-image: url('{{ asset('Profile/'.$user->img) }}')"></div>
+                    <p class="text-sm truncate w-16">Ahmad Khalil</p>
+                  </div>
+                  <div class="swiper-slide flex flex-col">
+                    <div class=" bg-center bg-cover rounded-full bg-no-repeat w-14 h-14 object-fill"  style="background-image: url('{{ asset('Profile/'.$user->img) }}')"></div>
+                    <p class="text-sm truncate w-16">Ahmad Khalil</p>
+                  </div>
+                  <div class="swiper-slide flex flex-col">
+                    <div class=" bg-center bg-cover rounded-full bg-no-repeat w-14 h-14 object-fill"  style="background-image: url('{{ asset('Profile/'.$user->img) }}')"></div>
+                    <p class="text-sm truncate w-16">Ahmad Khalil</p>
+                  </div>
+                  <div class="swiper-slide flex flex-col">
+                    <div class=" bg-center bg-cover rounded-full bg-no-repeat w-14 h-14 object-fill"  style="background-image: url('{{ asset('Profile/'.$user->img) }}')"></div>
+                    <p class="text-sm truncate w-16">Ahmad Khalil</p>
+                  </div>
+                  <div class="swiper-slide flex flex-col">
+                    <div class=" bg-center bg-cover rounded-full bg-no-repeat w-14 h-14 object-fill"  style="background-image: url('{{ asset('Profile/'.$user->img) }}')"></div>
+                    <p class="text-sm truncate w-16">Ahmad Khalil</p>
+                  </div>
+                  <div class="swiper-slide flex flex-col">
+                    <div class=" bg-center bg-cover rounded-full bg-no-repeat w-14 h-14 object-fill"  style="background-image: url('{{ asset('Profile/'.$user->img) }}')"></div>
+                    <p class="text-sm truncate w-16">Ahmad Khalil</p>
+                  </div>
+                </div>
+                <div class="absolute right-1 top-8 bg-white w-6 h-6 z-40 rounded-full flex justify-center items-center cursor-pointer" onclick="document.getElementById('next').click()"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="absolute left-1 top-8 bg-white w-6 h-6 z-40 rounded-full flex justify-center items-center cursor-pointer" onclick="document.getElementById('prev').click()"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="swiper-button-next hidden" id="next"></div>
+                <div class="swiper-button-prev hidden" id="prev"></div>
             </div>
             
         </div>
@@ -151,5 +197,24 @@
         </div>
     </div>
     </div>
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 5,
+          centeredSlides: false,
+          spaceBetween: 20,
+          grabCursor: true,
+          navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        mousewheel: true,
+        keyboard: true,
+        });
+      </script>
 </body>
 </html>
