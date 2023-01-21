@@ -13,7 +13,7 @@
     <div class="flex justify-left min-h-screen">
 
         <!-- div1 -->
-
+{{--  --}}
 
         <div class="basis-2/12"></div>
     <div class="fixed bg-white h-screen flex flex-col justify-between py-8 items-left w-2/12 border-r">
