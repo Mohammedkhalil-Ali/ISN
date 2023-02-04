@@ -14,7 +14,7 @@
 
         <!-- div1 -->
 
-
+{{--  --}}
         <div class="basis-2/12"></div>
     <div class="fixed bg-white h-screen flex flex-col justify-between py-8 items-left w-2/12 border-r">
         <div><h1 class="text-3xl ml-4" style="font-family: 'Satisfy', cursive;">Instagram</h1></div>
